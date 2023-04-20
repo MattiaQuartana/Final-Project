@@ -18,56 +18,38 @@
     <html>
     <head>
         <title>Titolo della Pagina</title>
-        <style>
-            .container {
-                display: flex;
-                flex-direction: row;
-            }
-            #main {
-                flex: 2;
-            }
-            #sidebar {
-                flex: 1;
-                overflow-y: scroll;
-                height: 200px;
-            }
-        </style>
+        
     </head>
     <body>
         <header>
             <button onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-left"></i> return main page</button>
         </header>
-        <main>
-            <div class="container">
-                <div id="main">
-                    <h1 class="paolo">Paolo Quartana</h1>
-                    <p class="story">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut tellus sit amet risus eleifend dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus fringilla cursus nibh, non sagittis nisi suscipit in. Donec ultricies elit nisl, sit amet laoreet felis volutpat at. Maecenas massa tortor, elementum non rutrum nec, suscipit et dui. Phasellus ultricies porta metus nec consectetur. Nunc sed lacus vitae tortor eleifend accumsan. Etiam</p>
-                </div>
-                <div id="sidebar">
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    <div>
-                        <div class="informationYears"> <h1> 1980</h1> <p> milano</p></div> Contenuto 1
-                    </div>
-                    
-                </div>
+        <div class="container">
+            <div class="gallery">
+              <div class="main-img">
+                <img src="media/websiteObj/1.jpg" alt="Main Image">
+              </div>
+              <div class="thumbnails">
+                <img src="media/pictures/firstAlbum/02 PHOTO -┬® Paolo Quartana.jpg" alt="Thumbnail 1" onclick="changeImage(this)">
+                <img src="media/websiteObj/2.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
+                <img src="media/websiteObj/3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+                <img src="media/websiteObj/4.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+                <img src="media/websiteObj/5.jpg" alt="Thumbnail 5" onclick="changeImage(this)">
+                <img src="media/websiteObj/6.jpg" alt="Thumbnail 6" onclick="changeImage(this)">
+                <img src="media/websiteObj/7.jpg" alt="Thumbnail 7" onclick="changeImage(this)">
+                <img src="media/websiteObj/8.jpg" alt="Thumbnail 8" onclick="changeImage(this)">
+                <img src="media/websiteObj/9.jpg" alt="Thumbnail 9" onclick="changeImage(this)">
+                <img src="media/websiteObj/10.jpg" alt="Thumbnail 10" onclick="changeImage(this)">
+                <img src="media/websiteObj/11.jpg" alt="Thumbnail 11" onclick="changeImage(this)">
+                <img src="media/websiteObj/12.jpg" alt="Thumbnail 12" onclick="changeImage(this)">
+              </div>
             </div>
-        </main>
-    </body>
-    </html>
-    
-</body>
-</html>
+          </div>
+          <script>
+            function changeImage(img) {
+              var mainImg = document.querySelector(".main-img img");
+              mainImg.src = img.src;
+            }
+          </script>
+        </body>
+      </html>
