@@ -22,76 +22,247 @@
   #timeline::-webkit-scrollbar-thumb {
     background-color: transparent; /* Change to desired color */
   }
-
-
-  /*------------------------------------------------------------------------------ Third Page */
-
-  .bodyprints {
-    background-color: #F2F0F2;
-}
-
-.return {
-    position: absolute;
-    top: 5vh;
-    left: 5vw;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
-    transition: all 0.3s ease;
-}
-
-.return:hover {
+// ------------------------------------------------------- Prima pagina
+h1, h2, p {
+    font-family: Montserrat;
+  }
+  
+  .sfondo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 9998;
+    backdrop-filter: blur(0);
+  }
+  
+  .bordered-text {
+    border: 1px dashed;
+    padding: 10px;
+    border-radius: 50px;
+  }
+  
+  .curriculum {
+    font-size: 100px;
     color: #fff;
-    border-bottom: 1px solid #fff;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    margin-top: -10vh;
-}
-
-.square {
-    position: relative;
-    width: 50vh;
-    height: 50vh;
-    margin-right: 10vw;
-    overflow: hidden;
-}
-
-.square img {
-    position: absolute;
-    top: 0;
+    margin-top: 15vh; 
+    margin-left: 10vw;
+  }
+  
+  .printspurchased {
+    font-size: 65px;
+    color: #fff;
+    margin-left: 10vw;
+  }
+  
+  .clickpoly {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 7vw;
+  }
+  
+  .black {
+    position: fixed;
+    left: 60vw;
+    top: 30vh;
+    width: 400px; 
+    height: auto; 
+    transform: scale(0.9);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+    z-index: 998;
+  }
+  .blue {
+    position: fixed;
+    left: 5vw;
+    top: 2vh;
+    width: 400px;
+    height: auto;
+    transform: scale(1);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .red {
+    position: fixed;
+    left: 50vw;
+    top: 10vh;
+    width: 400px;
+    height: auto;
+    transform: scale(0.5);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+    z-index: 999;
+  }
+  
+  .green {
+    position: fixed;
+    left: 30vw;
+    top: 30vh;
+    width: 400px;
+    height: auto;
+    transform: scale(0.6);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+    z-index: 999; 
+  }
+  
+  /* Prova carusel*/
+  .pino {
+    display: none;
+    position: fixed;
+    z-index: 9999;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(9px);
+    
+  }
+  .gino {
+    background-color: transparent;
+    margin-top: 2%;
+    margin-left: 25vw;
+    padding: 20px;
+    border: 0px solid transparent;
+    width: 80%;
+    max-width: 50vw;
+    height: 60vh; /* Strange is not changing*/
+  }
+  .freccia, .frecciaicon {
+      filter: invert(100%);
+  }
+  
+  .itemCarusel{
+    background-color: white ;
+    padding: 5%;
+  }
+  
+  .imaginealbumCont{
+    width: 80%; height: 100%; padding-left: 25%;
+  }
+  
+  #contenitoreScritte{
+    height: 50vh; width: 100%; z-index: 997;
+  }
+
+//------------------------------------------------------------------------------------ end prima pagina
+
+//--------------------------------------------------------------------------------second pagina
+.lineaP {
+    flex: 0 0 2px !important;
+    max-width: 2px !important;
+}
+#contenitore{
+    margin-top: 10vh;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50vh;
-    height: 50vh;
+.picturestime1980, .picturestime1985, .picturestime1990, .picturestime1997, .picturestime1999{
+    margin-top: 1vh;
 }
 
-.gallery img {
-    width: calc(25% - 10px);
-    height: calc(33.33% - 10px);
-    margin: 5px;
-    object-fit: cover;
+#year-1980:hover, #year-1985:hover, #year-1990:hover, #year-1997:hover, #year-1999:hover {
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
+#containercurriculum{
+    background-color: rgb(0, 0, 0); 
+    height: 100%; 
+    border-radius: 20px; 
+    box-shadow: -2px 1px 100px 14px rgba(0, 0, 0, 0.25); 
+    }
+    
+#timeline{
+    height: 20vh; 
+    overflow-y: hidden; 
+    height: 100%;
 }
 
-.gallery img.active {
-    border: 2px solid #333;
+#scrittetime{
+margin-top: 4vh; 
+margin-bottom: 4vh; 
+color: white;
+margin-left: 2vw
 }
+
+.separe{
+background-color: rgb(255, 255, 255); 
+width: 5px; 
+height: 100%; 
+}
+ 
+//-----------------------------------------------------------end second page
+  /*------------------------------------------------------------------------------ Third Page */
+
+#potogalleryPrint{
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 1000px) {
+    .curriculum {
+        font-size: 40px;
+        color: #fff;
+        margin-top: 15vh; 
+        align-items: flex-end;
+        
+      }
+      
+      .printspurchased {
+        font-size: 35px;
+        color: #fff;
+        
+      }
+      
+      .clickpoly {
+        display: none;
+      }
+
+      .black {
+        position: fixed;
+        left: 0vw;
+        top: 36vh;
+        width: 200px; 
+        height: auto; 
+        transform: scale(0.9);
+        transform-origin: center;
+        transition: all 0.5s ease-in-out;
+        z-index: 998;
+      }
+      .blue {
+        position: fixed;
+        left: 0vw;
+        top: 2vh;
+        width: 200px;
+        height: auto;
+        transform: scale(1);
+        transform-origin: center;
+        transition: all 0.5s ease-in-out;
+      }
+      
+      .red {
+        position: fixed;
+        left: 0vw;
+        top: 14vh;
+        width: 200px;
+        height: auto;
+        transform: scale(0.5);
+        transform-origin: center;
+        transition: all 0.5s ease-in-out;
+        z-index: 999;
+      }
+      
+      .green {
+        position: fixed;
+        left: 0vw;
+        top: 24vh;
+        width: 200px;
+        height: auto;
+        transform: scale(0.6);
+        transform-origin: center;
+        transition: all 0.5s ease-in-out;
+        z-index: 999; 
+      }
+    }

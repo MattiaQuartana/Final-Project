@@ -5,164 +5,41 @@
   <meta charset="utf-8">
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="main.css" rel="stylesheet">
-  <script src="bootstrap.bundle.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'>
-
+  <script src="script.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="bootstrap.bundle.min.js"></script>
+  <link href="main.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 </head>
 
 <style>
 /* Testing */
-h1, h2, p {
-  font-family: Montserrat;
-}
 
-.sfondo {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  z-index: 9998;
-  backdrop-filter: blur(0);
-}
-
-.bordered-text {
-  border: 1px dashed;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-.curriculum {
-  font-size: 100px;
-  color: #fff;
-  margin-top: 15vh; 
-  margin-left: 10vw;
-}
-
-.printspurchased {
-  font-size: 65px;
-  color: #fff;
-  margin-left: 10vw;
-}
-
-.clickpoly {
-  color: #fff;
-  font-size: 20px;
-  margin-right: 7vw;
-}
-
-.black {
-  position: fixed;
-  left: 60vw;
-  top: 30vh;
-  width: 400px; 
-  height: auto; 
-  transform: scale(0.9);
-  transform-origin: center;
-  transition: all 0.5s ease-in-out;
-  z-index: 998;
-}
-.blue {
-  position: fixed;
-  left: 5vw;
-  top: 2vh;
-  width: 400px;
-  height: auto;
-  transform: scale(1);
-  transform-origin: center;
-  transition: all 0.5s ease-in-out;
-}
-
-.red {
-  position: fixed;
-  left: 50vw;
-  top: 10vh;
-  width: 400px;
-  height: auto;
-  transform: scale(0.5);
-  transform-origin: center;
-  transition: all 0.5s ease-in-out;
-  z-index: 999;
-}
-
-.green {
-  position: fixed;
-  left: 30vw;
-  top: 30vh;
-  width: 400px;
-  height: auto;
-  transform: scale(0.6);
-  transform-origin: center;
-  transition: all 0.5s ease-in-out;
-  z-index: 999; 
-}
-
-/* Prova carusel*/
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(9px);
-  
-}
-.modal-content {
-  background-color: transparent;
-  margin-top: 2%;
-  margin-left: 25vw;
-  padding: 20px;
-  border: 0px solid transparent;
-  width: 80%;
-  max-width: 50vw;
-  height: 60vh; /* Strange is not changing*/
-}
-.carousel-control-next, .carousel-control-prev {
-    filter: invert(100%);
-}
-
-.itemCarusel{
-  background-color: white ;
-  padding: 5%;
-}
-
-.imaginealbumCont{
-  width: 80%; height: 100%; padding-left: 25%;
-}
-
-#contenitoreScritte{
-  height: 50vh; width: 100%; z-index: 997;
-}
 </style>
 
-<body class="sfondo bg-image" style="background-image: url(/media/websiteObj/2.1.png);">
+<body class="sfondo bg-image" style="background-image: url(../media/websiteObj/2.1.png);">
   <div class="section" style="height: 100vh;">
     <!-- Polymporhs -->
     <div class="position-absolute top-0 start-0"><!-- Black -->
-      <img src="/media/websiteObj/Black.gif" class="black img-fluid" alt="Responsive image">  
+      <img src="../media/websiteObj/Black.gif" class="black img-fluid" alt="Responsive image">  
     </div>
     <div class="position-absolute top-0 start-0"><!-- Blue -->
-      <img src="/media/websiteObj/Blue.gif" class="blue img-fluid" alt="Responsive image">  
+      <img src="../media/websiteObj/Blue.gif" class="blue img-fluid" alt="Responsive image">  
     </div>
     <div class="position-absolute top-0 start-0"><!-- Green -->
-      <img src="/media/websiteObj/Green.gif" class="green img-fluid" alt="Responsive image">  
+      <img src="../media/websiteObj/Green.gif" class="green img-fluid" alt="Responsive image">  
     </div>
     <div class="position-absolute top-0 start-0"><!-- Red -->
-      <img src="/media/websiteObj/Red.gif" class="red img-fluid" alt="Responsive image">  
+      <img src="../media/websiteObj/Red.gif" class="red img-fluid" alt="Responsive image">  
     </div>
 
     <!-- Red Gallery Modal -->
-    <div id="redModal" class="modal" >
-      <div class="modal-content">
+    <div id="redModal" class="modal pino" >
+      <div class="modal-content gino">
         <!-- Add your red gallery carousel content here -->
         <div class="row" >
           
@@ -175,14 +52,14 @@ h1, h2, p {
 
                 <div class="imaginealbumCont" >
                   <div id="immaginealbum" >
-                    <img src="/media/pictures/firstAlbum/02 PHOTO -┬® Paolo Quartana.jpg" class="d-block" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                    <img src="../media/pictures/firstAlbum/02 PHOTO -┬® Paolo Quartana.jpg" class="d-block" alt="first picture" style="max-width: 100%; max-height: 100%;">
                   </div>
                 </div>
                 
                 <div class="card-body row" style="height: auto;"> <!--card info-->
                   
                   <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                    <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <a id="bolzano"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Bolzano"></a>
                   </div>
   
                   <div class="col-sm-8">
@@ -197,13 +74,13 @@ h1, h2, p {
                 
                 <div class="imaginealbumCont">
                   <div id="immaginealbum" >
-                    <img src="/media/pictures/firstAlbum/03 PHOTO -┬® Paolo Quartana.jpg" class="d-block" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                    <img src="../media/pictures/firstAlbum/03 PHOTO -┬® Paolo Quartana.jpg" class="d-block" alt="first picture" style="max-width: 100%; max-height: 100%;">
                   </div>
                 </div>
                 <div class="card-body row" style="height: auto;"> <!--card info-->
                   
                   <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                    <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <a id="bolzano"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Bolzano"></a>
                   </div>
   
                   <div class="col-sm-8">
@@ -218,8 +95,8 @@ h1, h2, p {
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#redCarouselExample" data-bs-slide="next" style=" height: 70%;">
-              <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+            <button class="carousel-control-next freccia" type="button" data-bs-target="#redCarouselExample" data-bs-slide="next" style=" height: 70%;">
+              <span class="carousel-control-next-icon frecciaicon" aria-hidden="true" ></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
@@ -232,8 +109,8 @@ h1, h2, p {
    
     <!-- Black Gallery Modal -->
 
-    <div id="blackModal" class="modal">
-      <div class="modal-content">
+    <div id="blackModal" class="modal pino">
+      <div class="modal-content gino">
         <!--start cont-->
         <div class="row" >
           
@@ -246,14 +123,14 @@ h1, h2, p {
                   
                   <div class="imaginealbumCont">
                     <div id="immaginealbum" >
-                      <img src="/media/pictures/secondAlbum/17 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                      <img src="../media/pictures/secondAlbum/17 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
                     </div>
                   </div>
                                     
                   <div class="card-body row" style="height: auto;"> <!--card info-->
                     
                     <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                      <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                      <a id="torino"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Torino"></a>
                     </div>
     
                     <div class="col-sm-8">
@@ -268,7 +145,7 @@ h1, h2, p {
                   
                   <div class="imaginealbumCont">
                     <div id="immaginealbum" >
-                      <img src="/media/pictures/secondAlbum/18 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                      <img src="../media/pictures/secondAlbum/18 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
                     </div>
                   </div>
                   
@@ -276,7 +153,7 @@ h1, h2, p {
                   <div class="card-body row" style="height: auto;"> <!--card info-->
                     
                     <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                      <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                      <a id="torino"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Torino"></a>
                     </div>
     
                     <div class="col-sm-8">
@@ -291,8 +168,8 @@ h1, h2, p {
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#blackCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button class="carousel-control-next freccia" type="button" data-bs-target="#blackCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
+                <span class="carousel-control-next-icon frecciaicon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -304,8 +181,8 @@ h1, h2, p {
       </div>
   
     <!-- Green Gallery Modal -->
-    <div id="greenModal" class="modal">
-      <div class="modal-content">
+    <div id="greenModal" class="modal pino">
+      <div class="modal-content gino">
         <!--start cont-->
         <div class="row" >
           
@@ -318,15 +195,15 @@ h1, h2, p {
 
                   <div class="imaginealbumCont">
                     <div id="immaginealbum" >
-                      <img src="/media/pictures/thirdAlbum/36 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                      <img src="../media/pictures/thirdAlbum/36 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
                     </div>
                   </div>
                   
                   
                   <div class="card-body row" style="height: auto;"> <!--card info-->
                     
-                    <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                      <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <div class="col-sm-4"> <!-- Codice mappa con  googl maps-->
+                      <a id="sicilia"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Sicilia"></a>
                     </div>
     
                     <div class="col-sm-8">
@@ -341,14 +218,14 @@ h1, h2, p {
                   
                   <div class="imaginealbumCont">
                     <div id="immaginealbum" >
-                      <img src="/media/pictures/thirdAlbum/37 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                      <a id="sicilia"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Sicilia"></a>
                     </div>
                   </div>
                                     
                   <div class="card-body row" style="height: auto;"> <!--card info-->
                     
-                    <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                      <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <div class="col-sm-4"> <!-- Codice mappa con  di googl maps-->
+                      <a id="sicilia"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Sicilia"></a>
                     </div>
     
                     <div class="col-sm-8">
@@ -363,8 +240,8 @@ h1, h2, p {
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#greenCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button class="carousel-control-next freccia" type="button" data-bs-target="#greenCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
+                <span class="carousel-control-next-icon frecciaicon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -376,8 +253,8 @@ h1, h2, p {
     </div>
   
     <!-- Blue Gallery Modal -->
-    <div id="blueModal" class="modal">
-      <div class="modal-content">
+    <div id="blueModal" class="modal pino">
+      <div class="modal-content gino">
        <!--start cont-->
        <div class="row" >
           
@@ -390,7 +267,7 @@ h1, h2, p {
 
                 <div class="imaginealbumCont">
                   <div id="immaginealbum" >
-                    <img src="/media/pictures/zforthAlbum/33 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                    <img src="../media/pictures/zforthAlbum/33 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
                   </div>
                 </div>
                 
@@ -398,7 +275,7 @@ h1, h2, p {
                 <div class="card-body row" style="height: auto;"> <!--card info-->
                   
                   <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                    <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <a id="sicilia"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Sicilia"></a>
                   </div>
   
                   <div class="col-sm-8">
@@ -413,7 +290,7 @@ h1, h2, p {
                 
                 <div class="imaginealbumCont">
                   <div id="immaginealbum" >
-                    <img src="/media/pictures/zforthAlbum/34 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
+                    <img src="../media/pictures/zforthAlbum/34 PHOTO -┬® Paolo Quartana.jpg" class="d-block w-100" alt="first picture" style="max-width: 100%; max-height: 100%;">
                   </div>
                 </div>
                
@@ -421,7 +298,7 @@ h1, h2, p {
                 <div class="card-body row" style="height: auto;"> <!--card info-->
                   
                   <div class="col-sm-4"> <!-- Codice mappa con API di googl maps-->
-                    <a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Berlino') + '" target="_blank"><img src="/media/websiteObj/map.png" class="d-block w-100" alt="Berlino"></a>
+                    <a id="sicilia"><img src="../media/websiteObj/map.png" class="d-block w-100" alt="Sicilia"></a>
                   </div>
   
                   <div class="col-sm-8">
@@ -436,8 +313,8 @@ h1, h2, p {
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#blueCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="carousel-control-next freccia" type="button" data-bs-target="#blueCarouselExample" data-bs-slide="next" style=" height: 70%;  ">
+              <span class="carousel-control-next-icon frecciaicon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
@@ -549,6 +426,32 @@ h1, h2, p {
       }
     });
 
+    var locations = [
+      { name: 'Bolzano', lat: 46.4993, lng: 11.3543 },
+      { name: 'Torino', lat: 45.0703, lng: 7.6869 },
+      { name: 'Sicilia', lat: 37.5994, lng: 14.0154 }
+    ];
+
+    function openMap(city) {
+      var url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(city.name);
+      window.open(url, '_blank');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var mappasLinks = document.querySelectorAll('a[id]');
+      mappasLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          var cityId = this.getAttribute('id');
+          var city = locations.find(function(location) {
+            return location.name.toLowerCase() === cityId.toLowerCase();
+          });
+          if (city) {
+            openMap(city);
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 // Contenuto di script.js
+// -------------------------------------------------INDEX
 
+
+//---------------------------------------------------End index
 
 
 // ------------------------------------------------- Page Curriculum
@@ -180,4 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     element1999.addEventListener('click', handleClick);
 });
+
+
 // ------------------------------------------------- END Page Curriculum
