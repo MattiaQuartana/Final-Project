@@ -133,7 +133,8 @@ h1, h2, p {
     height: 60vh; /* Strange is not changing*/
   }
   .freccia, .frecciaicon {
-      filter: invert(100%);
+    filter: invert(100%);
+      
   }
   
   .itemCarusel{
@@ -148,8 +149,8 @@ h1, h2, p {
   #contenitoreScritte{
     height: 50vh; width: 100%; z-index: 997;
   }
-
-//------------------------------------------------------------------------------------ end prima pagina
+  
+ //------------------------------------------------------------------------------------ end prima pagina
 
 //--------------------------------------------------------------------------------second pagina
 .lineaP {
@@ -195,8 +196,9 @@ height: 100%;
 }
  
 //-----------------------------------------------------------end second page
-  /*------------------------------------------------------------------------------ Third Page */
-
+  /*------------------------------------------------------------------------------ Third Page */.
+  .error // don't know this error
+ 
 #potogalleryPrint{
     margin-bottom: 2vh;
 }
@@ -223,7 +225,7 @@ height: 100%;
       .black {
         position: fixed;
         left: 0vw;
-        top: 36vh;
+        top: 36 vh;
         width: 200px; 
         height: auto; 
         transform: scale(0.9);
